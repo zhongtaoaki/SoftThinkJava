@@ -1,4 +1,4 @@
-package shuuun;
+package shuun;
 
 public class Arithmetic {
 
