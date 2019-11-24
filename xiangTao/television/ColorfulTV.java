@@ -10,13 +10,15 @@ public class ColorfulTV extends Television {
 	//カラーテレビのディフォルト放送
 	@Override
 	public void play() {
+		System.out.println("カラーテレビ番組"+getChannel()+"放送開始");		
 
 	}	
 
 	//チャンネルを設定、チェンジ
 	@Override
 	public void play(int setChannel) {
-		System.out.println("テレビ番組"+setChannel+"放送開始");		
+		super.setChannel(setChannel);
+		System.out.println("カラーテレビ番組"+getChannel+"放送開始");		
 		
 	}
 

@@ -2,6 +2,8 @@ package television;
 
 import java.util.Scanner;
 
+import television.Television.Direct;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -25,10 +27,15 @@ public class Main {
 //		monochromeTV.operateVolume(Direct.UP);
 //		monochromeTV.operateVolume(Direct.UP);
 //		System.out.println(monochromeTV.getVolume());
-		monochromeTV.operateChannel(Direct.UP);
+//		monochromeTV.operateChannel(Direct.UP);
+//		monochromeTV.operateChannel(Direct.UP);
+//		System.out.println(monochromeTV.getChannel());
+//		monochromeTV.play(monochromeTV.getChannel());
+//		monochromeTV.play(monochromeTV.getChannel());
+		monochromeTV.play(12);
 		monochromeTV.operateChannel(Direct.UP);
 		System.out.println(monochromeTV.getChannel());
-		monochromeTV.play(monochromeTV.getChannel());
+	
 	}
 
 }
