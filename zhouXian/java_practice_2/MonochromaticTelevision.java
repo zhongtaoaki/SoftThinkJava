@@ -13,6 +13,9 @@ public class MonochromaticTelevision extends Television {
 		super.setSize(size);
 	}
 
+	/**
+	 * 番組を再生する
+	 */
 	@Override
 	public void playProgram() {
 		System.out.println("白黒テレビです。");

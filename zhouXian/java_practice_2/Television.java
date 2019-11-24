@@ -34,7 +34,7 @@ public class Television {
 	/**
 	 * チャンネルを変える
 	 * 
-	 * @param channel
+	 * @param changeType
 	 */
 	public void changeChannel(String changeType) {
 		if ("+".equals(changeType)) {
@@ -50,7 +50,7 @@ public class Television {
 	/**
 	 * 音量を調整する
 	 * 
-	 * @param channel
+	 * @param changeType
 	 */
 	public void changeVolume(String changeType) {
 		if ("+".equals(changeType)) {
