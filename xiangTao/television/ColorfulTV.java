@@ -2,21 +2,21 @@ package television;
 
 public class ColorfulTV extends Television {
 
-	//size‚ğæ“¾
+	//sizeã‚’è¨­å®š
 	public ColorfulTV(int size){
 		super(size);
 	}
 
-	//ƒJƒ‰[ƒeƒŒƒr‚ÌƒfƒBƒtƒHƒ‹ƒg•ú‘—
+	//ã‚«ãƒ©ãƒ¼ãƒ†ãƒ¬ãƒ“ã®ãƒ‡ã‚£ãƒ•ã‚©ãƒ«ãƒˆæ”¾é€
 	@Override
 	public void play() {
 
 	}	
 
-	//ƒ`ƒƒƒ“ƒlƒ‹‚ğİ’èAƒ`ƒFƒ“ƒW
+	//ãƒãƒ£ãƒ³ãƒãƒ«ã‚’è¨­å®šã€ãƒã‚§ãƒ³ã‚¸
 	@Override
 	public void play(int setChannel) {
-		System.out.println("ƒeƒŒƒr”Ô‘g"+setChannel+"•ú‘—ŠJn");		
+		System.out.println("ãƒ†ãƒ¬ãƒ“ç•ªçµ„"+setChannel+"æ”¾é€é–‹å§‹");		
 		
 	}
 

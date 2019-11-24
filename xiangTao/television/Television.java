@@ -2,22 +2,27 @@ package television;
 
 public abstract class Television {
 
-	//ƒfƒBƒtƒHƒ‹ƒg
+	//ãƒ‡ã‚£ãƒ•ã‚©ãƒ«ãƒˆ
 	private int size;
 	private int volume = 0;
 	private int channel = 1;
-	
-	//size‚ğæ“¾
+
+	//ï¼‹ï¼ãƒœã‚¿ãƒ³ã‚’ä½œã‚‹
+	public enum Direct {
+		UP, DOWN;
+	}
+
+	//sizeã‚’è¨­å®š
 	public Television (int size) {
 		this.size = size;
 	}
 	
-	//’ŠÛƒNƒ‰ƒXAƒfƒBƒtƒHƒ‹ƒg•ú‘—
+	//æŠ½è±¡ã‚¯ãƒ©ã‚¹ã€ãƒ‡ã‚£ãƒ•ã‚©ãƒ«ãƒˆæ”¾é€
 	public abstract void play();
-	//’ŠÛƒNƒ‰ƒXAƒ`ƒƒƒ“ƒlƒ‹‚ğİ’è
+	//æŠ½è±¡ã‚¯ãƒ©ã‚¹ã€ãƒãƒ£ãƒ³ãƒãƒ«ã‚’è¨­å®š
 	public abstract void play(int setChannel);
 	
-	//ƒ{ƒ^ƒ“‚ğ‰Ÿ‰ºA‰¹—Ê‚ğup/down
+	//ãƒœã‚¿ãƒ³ã‚’æŠ¼ä¸‹ã€éŸ³é‡ã‚’up/down
 	public void operateVolume(Direct direct) {
 		if(direct == Direct.UP) {
 			volume++;
@@ -26,7 +31,7 @@ public abstract class Television {
 		}
 	}
 
-	//ƒ{ƒ^ƒ“‚ğ‰Ÿ‰ºAƒ`ƒƒƒ“ƒlƒ‹‚ğup/down
+	//ãƒœã‚¿ãƒ³ã‚’æŠ¼ä¸‹ã€ãƒãƒ£ãƒ³ãƒãƒ«ã‚’up/down
 	public void operateChannel(Direct direct) {
 		if(direct == Direct.UP) {
 			channel = getChannel() + 1;
@@ -35,6 +40,7 @@ public abstract class Television {
 		}
 	}
 	
+	//sizeã‚’è¨­å®š
 	public int getSize() {
 		return size;
 	}

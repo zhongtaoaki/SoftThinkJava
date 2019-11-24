@@ -2,23 +2,23 @@ package television;
 
 public class MonochromeTV extends Television {
 
-	//size‚ğæ“¾
+	//sizeã‚’è¨­å®š
 	public MonochromeTV(int size){
 		super(size);
-//		System.out.println("”’•ƒeƒŒƒr");			
+//		System.out.println("ç™½é»’ãƒ†ãƒ¬ãƒ“");			
 	}
 	
-	//”’•ƒeƒŒƒr‚ÌƒfƒBƒtƒHƒ‹ƒg•ú‘—
+	//ç™½é»’ãƒ†ãƒ¬ãƒ“ã®ãƒ‡ã‚£ãƒ•ã‚©ãƒ«ãƒˆæ”¾é€
 	@Override
 	public void play() {
-		System.out.println("ƒeƒŒƒr”Ô‘g"+getChannel()+"•ú‘—ŠJn");		
+		System.out.println("ãƒ†ãƒ¬ãƒ“ç•ªçµ„"+getChannel()+"æ”¾é€é–‹å§‹");		
 
 	}	
 
-	//ƒ`ƒƒƒ“ƒlƒ‹‚ğİ’èAƒ`ƒFƒ“ƒW
+	//ãƒãƒ£ãƒ³ãƒãƒ«ã‚’è¨­å®šã€ãƒã‚§ãƒ³ã‚¸
 	@Override
 	public void play(int setChannel) {
-		System.out.println("ƒeƒŒƒr”Ô‘g"+setChannel+"•ú‘—ŠJn");		
+		System.out.println("ãƒ†ãƒ¬ãƒ“ç•ªçµ„"+setChannel+"æ”¾é€é–‹å§‹");		
 		
 	}
 	

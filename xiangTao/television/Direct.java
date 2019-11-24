@@ -1,5 +1,5 @@
-package television;
-
-public enum Direct {
-	UP, DOWN;
-}
+//package television;
+//
+//public enum Direct {
+//	UP, DOWN;
+//}
