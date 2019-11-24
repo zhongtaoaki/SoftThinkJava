@@ -8,7 +8,7 @@ public class Television {
 	private boolean color;
 	// 音量
 	private int volume = 11;
-	// チャンネル
+	// チャンネル番号
 	private int channel = 7;
 
 	/**
@@ -26,7 +26,7 @@ public class Television {
 	 * 
 	 * @param channel
 	 */
-	public void replayProgram(int channel) {
+	public void playProgram(int channel) {
 		this.channel = channel;
 		playProgram();
 	}
@@ -38,10 +38,10 @@ public class Television {
 	 */
 	public void changeChannel(String changeType) {
 		if ("+".equals(changeType)) {
-			// チャンネルを増やす
+			// チャンネル番号を増やす
 			this.channel += 1;
 		} else if ("-".equals(changeType)) {
-			// チャンネルを減る
+			// チャンネル番号を減る
 			this.channel -= 1;
 		}
 		// playProgram();
@@ -55,10 +55,10 @@ public class Television {
 	public void changeVolume(String changeType) {
 		if ("+".equals(changeType)) {
 			// 音量を増やす
-			this.volume = this.volume + 1;
+			this.volume += 1;
 		} else if ("-".equals(changeType)) {
 			// 音量を減る
-			this.volume = this.volume - 1;
+			this.volume -= 1;
 		}
 		// playProgram();
 	}
