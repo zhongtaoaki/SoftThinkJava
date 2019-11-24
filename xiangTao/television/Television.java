@@ -31,7 +31,7 @@ public abstract class Television {
 		}
 	}
 
-	//ボタンを押下、チャンネルをup/down
+	//ボタンを押下、チャンネルをup/dsown
 	public void operateChannel(Direct direct) {
 		if(direct == Direct.UP) {
 			channel = getChannel() + 1;
@@ -40,15 +40,17 @@ public abstract class Television {
 		}
 	}
 	
-	//sizeを設定
+	//sizeを取得
 	public int getSize() {
 		return size;
 	}
 	
+	//volumeを取得
 	public int getVolume() {
 		return volume;
 	}
 
+	//channelを取得
 	public int getChannel() {
 		return channel;
 	}
