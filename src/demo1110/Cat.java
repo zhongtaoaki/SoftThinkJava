@@ -1,14 +1,13 @@
 package demo1110;
 
-public class Cat extends Pet {
+public class Cat extends Pet{
 
-	public String name;
-	private String gender;
-	public String sound;
+	public String gender;
 	public String color;
+	public String name="cat";
 
 	public void makeSound() {
-		System.out.println(name + "が声している：" + sound);
+		System.out.println(super.name + "が声している：" + getSound());
 	}
 
 }
