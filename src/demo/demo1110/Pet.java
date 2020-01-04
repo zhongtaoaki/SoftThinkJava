@@ -1,4 +1,4 @@
-package demo1110;
+package demo.demo1110;
 
 public class Pet {
 
