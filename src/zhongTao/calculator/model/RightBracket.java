@@ -1,9 +1,9 @@
-package shoutua.calculator.model;
+package zhongTao.calculator.model;
 
 public class RightBracket implements Token {
 
 	public int getPriority() {
-		return -2;
+		return Priority.rightBracket.getValue();
 	}
 
 }

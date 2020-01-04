@@ -1,21 +1,23 @@
-package shoutua.calculator.service;
+package zhongTao.calculator.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import shoutua.calculator.model.Token;
-import shoutua.calculator.model.TokenFactory;
+import zhongTao.calculator.exception.TokenException;
+import zhongTao.calculator.model.Token;
+import zhongTao.calculator.model.TokenFactory;
 
 public class Formattor {
 
 	/**
+	 * 文字列を解析する
 	 * 
 	 * @param String
 	 * @return List<Token>
+	 * @throws TokenException
 	 */
-	public List<Token> formatIntoTokens(String expression) {
-		// todo:space
+	public List<Token> formatIntoTokens(String expression) throws TokenException {
 		List<Token> tokens = new ArrayList<Token>();
 		char[] chars = expression.toCharArray();
 
@@ -26,28 +28,31 @@ public class Formattor {
 		char c = chars[0];
 		if ('0' <= c && c <= '9') {
 			stringBuffer.append(c);
-		} else {
-			tokens.add(tokenFactory.getToken(c));
+		} else if (c != ' ') {
+			tokens.add(tokenFactory.getToken(c, 1));
 		}
 
 		for (int i = 1; i < chars.length; i++) {
 			c = chars[i];
-			if ('0' <= c && c <= '9' || c == '.') {
-				stringBuffer.append(c);
-			} else if (c == '-') {
-				if (chars[i - 1] == '(') {
+			if (c != ' ') {
+
+				if (('0' <= c && c <= '9') || c == '.') {
 					stringBuffer.append(c);
+				} else if (c == '-') {
+					if (chars[i - 1] == '(') {
+						stringBuffer.append(c);
+					} else {
+						tokens.add(tokenFactory.getToken(stringBuffer));
+						stringBuffer.setLength(0);
+						tokens.add(tokenFactory.getToken(c, i + 1));
+					}
 				} else {
-					tokens.add(tokenFactory.getToken(stringBuffer));
+					if (stringBuffer.length() > 0) {
+						tokens.add(tokenFactory.getToken(stringBuffer));
+					}
 					stringBuffer.setLength(0);
-					tokens.add(tokenFactory.getToken(c));
+					tokens.add(tokenFactory.getToken(c, i + 1));
 				}
-			} else {
-				if (stringBuffer.length() > 0) {
-					tokens.add(tokenFactory.getToken(stringBuffer));
-				}
-				stringBuffer.setLength(0);
-				tokens.add(tokenFactory.getToken(c));
 			}
 		}
 		if (stringBuffer.length() > 0) {
@@ -58,6 +63,7 @@ public class Formattor {
 	}
 
 	/**
+	 * 逆ポーランドに変換する
 	 * 
 	 * @param List<Token>
 	 * @return List<Token>

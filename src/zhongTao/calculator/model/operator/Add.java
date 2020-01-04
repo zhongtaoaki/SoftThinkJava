@@ -1,14 +1,12 @@
-package shoutua.calculator.model.operator;
+package zhongTao.calculator.model.operator;
 
-import shoutua.calculator.model.Operator;
+import zhongTao.calculator.model.Priority;
 
 public class Add extends Operator {
 
-	final int priority = 0;
-
 	@Override
 	public int getPriority() {
-		return priority;
+		return Priority.add.getValue();
 	}
 
 	@Override

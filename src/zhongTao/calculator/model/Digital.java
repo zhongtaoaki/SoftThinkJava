@@ -1,4 +1,4 @@
-package shoutua.calculator.model;
+package zhongTao.calculator.model;
 
 public class Digital implements Token {
 
@@ -8,12 +8,12 @@ public class Digital implements Token {
 		return value;
 	}
 
-	public Digital(double d) {
-		this.value = d;
+	public Digital(double value) {
+		this.value = value;
 	}
 
 	public int getPriority() {
-		return -3;
+		return Priority.degital.getValue();
 	}
 
 }
