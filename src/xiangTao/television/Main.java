@@ -1,8 +1,6 @@
-package television;
+package xiangTao.television;
 
-import java.util.Scanner;
-
-import television.Television.Direct;
+import xiangTao.television.Television.Direct;
 
 public class Main {
 
@@ -35,7 +33,7 @@ public class Main {
 		monochromeTV.play(12);
 		monochromeTV.operateChannel(Direct.UP);
 		System.out.println(monochromeTV.getChannel());
-	
+
 	}
 
 }
