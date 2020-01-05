@@ -9,10 +9,13 @@ interface Person {
 }
 
 class Child implements Person {
+	@Override
 	public void eat() {
 		System.out.println("eat something");
 	}
-}
+	public void name() {
+		
+	}}
 
 public class NoName {
 	public static void main(String[] args) {
@@ -24,11 +27,11 @@ public class NoName {
 //			}
 //		};
 //		person.eat();
-//		
-		Person person = () -> {
-			System.out.println("eat something");
-		};
-		person.eat();
+		
+//		Person person = () -> {
+//			System.out.println("eat something");
+//		};
+//		person.eat();
 
 		Function<Integer, String> asterisker = (i) -> {
 			return "*" + i;

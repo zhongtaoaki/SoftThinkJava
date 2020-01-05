@@ -1,20 +1,35 @@
 package demo.demo0105;
 
 public class Outer {
-	private int outerValue;
+	private static int outerValue;
 
-	public class Inner {
+	public static class Inner {
 		public int innerValue;
 
 		private void method() {
 			// OK
-			this.innerValue = Outer.this.outerValue;
+			// this.innerValue = Outer.this.outerValue;
 		}
 	}
 
 	private void method() {
+		int outerValue;
+		class InnerLocal {
+			public int innerValue;
+
+			private void method() {
+				// OK
+				//this.innerValue = Outer.this.outerValue;
+			}
+		}
+		InnerLocal local = new InnerLocal();
 		// NG
-		// this.outerValue = innerValue ;
-		Outer.Inner inner = (new Outer()).new Inner();
+		 //this.outerValue = innerValue ;
+		//Outer outer = new Outer();
+		int i = Outer.outerValue;
+		//Outer.Inner inner = outer.new Inner();
+		Outer.Inner inner =new Outer.Inner();	
 	}
 }
+	
+

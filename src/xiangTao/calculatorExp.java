@@ -66,7 +66,7 @@ public class calculatorExp {
 			// 数値の場合、逆ポーランド式Listに入れる
 			default:
 //				calList.add(String.valueOf(array[i]));
-				if (i > 0 && array[i - 1] >= '0' && array[i] <= '9') {
+				if (0 < i && '0' <= array[i - 1] && array[i - 1] <= '9') {
 					calList.add(String.valueOf(calList.removeLast()) + String.valueOf(array[i]));
 					break;
 				} else {

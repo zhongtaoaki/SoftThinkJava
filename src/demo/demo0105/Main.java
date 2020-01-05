@@ -1,13 +1,15 @@
 package demo.demo0105;
 
-class ClassSample {
-	private Object o;
+import java.util.List;
 
-	public ClassSample(Object o) {
+class ClassSample<T> {
+	private T o;
+
+	public ClassSample(T o) {
 		this.o = o;
 	}
 
-	public Object getO() {
+	public T getO() {
 		return o;
 	}
 }
@@ -16,9 +18,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ClassSample cs = new ClassSample("Hello");
-		Integer i = (Integer) cs.getO();
-		System.out.println(i);
+		ClassSample<String> cs = new ClassSample<String>("Hello");
+		//Integer i = (Integer) cs.getO();
+		System.out.println(cs);
 	}
 
 }
