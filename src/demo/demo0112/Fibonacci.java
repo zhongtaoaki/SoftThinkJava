@@ -4,11 +4,8 @@ package demo.demo0112;
 public class Fibonacci {
 
 	private static int fib(int num) {
-		if (num == 0) {
-			return 0;
-		}
-		if (num == 1) {
-			return 1;
+		if (num < 2) {
+			return num;
 		}
 		return fib(num - 1) + fib(num - 2);
 	}
@@ -17,7 +14,7 @@ public class Fibonacci {
 
 		long start = System.currentTimeMillis();
 
-		int n = 40;
+		int n = 50;
 		int sum = fib(n);
 
 		long end = System.currentTimeMillis();

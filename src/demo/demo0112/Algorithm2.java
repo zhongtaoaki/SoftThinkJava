@@ -10,7 +10,7 @@ public class Algorithm2 {
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int i : array) {
 			if (map.get(i) == null) {
-				map.put(i, 1);
+				map.put(i, i);
 			} else {
 				map.remove(i);
 			}
@@ -20,4 +20,36 @@ public class Algorithm2 {
 		}
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	int feb(int index){
+		if (index==0) {
+			return 0;
+		}
+		if (index==1) {
+			return 1;
+		}
+		return feb(index-1)+feb(index-2);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
